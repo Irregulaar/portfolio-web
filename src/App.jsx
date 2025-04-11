@@ -1,22 +1,31 @@
 import { useState, useEffect } from "react";
 import "./styles/global.css";
-import { FaLightbulb } from "react-icons/fa6";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoReloadOutline } from "react-icons/io5";
-import { IoMenu } from "react-icons/io5";
-import { IoMdClose } from "react-icons/io";
-import { IoMdAdd } from "react-icons/io";
-import { FaLock } from "react-icons/fa";
-import { FaExternalLinkAlt } from "react-icons/fa";
-import { FaVolumeHigh } from "react-icons/fa6";
-import { FaVolumeXmark } from "react-icons/fa6";
-import { FaCode } from "react-icons/fa";
-import { FaQuestion } from "react-icons/fa";
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTailwindcss, SiPython, SiGit, SiGithub, SiSpotify } from "react-icons/si";
-import { FaXTwitter, FaDiscord } from "react-icons/fa6";
 import TypedText from "./TypedText";
 import { Link } from "react-router-dom";
+import FaCode from "./icons/facode.svg?react";
+import FaDiscord from "./icons/fadiscord.svg?react";
+import FaExternalLinkAlt from "./icons/faexternallinkalt.svg?react";
+import FaLightbulb from "./icons/falightbulb.svg?react";
+import FaLock from "./icons/falock.svg?react";
+import FaQuestion from "./icons/faquestion.svg?react";
+import FaVolumeHigh from "./icons/favolumehigh.svg?react";
+import FaVolumeXMark from "./icons/favolumexmark.svg?react";
+import FaXTwitter from "./icons/faxtwitter.svg?react";
+import IoIosArrowBack from "./icons/ioiosarrowback.svg?react";
+import IoIosArrowForward from "./icons/ioiosarrowforward.svg?react";
+import IoMdAdd from "./icons/iomdadd.svg?react";
+import IoMdClose from "./icons/iomdclose.svg?react";
+import IoMenu from "./icons/iomenu.svg?react";
+import IoReloadOutline from "./icons/ioreloadoutline.svg?react";
+import SiCSS3 from "./icons/sicss3.svg?react";
+import SiGit from "./icons/sigit.svg?react";
+import SiGithub from "./icons/sigithub.svg?react";
+import SiHTML5 from "./icons/sihtml5.svg?react";
+import SiJavaScript from "./icons/sijavascript.svg?react";
+import SiPython from "./icons/sipython.svg?react";
+import SiReact from "./icons/sireact.svg?react";
+import SiSpotify from "./icons/sispotify.svg?react";
+import SiTailwindCSS from "./icons/sitailwindcss.svg?react";
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -82,7 +91,11 @@ function App() {
               }}
               className="flex flex-col items-center justify-center gap-2"
             >
-              {isPlaying ? <FaVolumeHigh className="text-2xl text-white" /> : <FaVolumeXmark className="text-2xl text-white" />}
+              {isPlaying ? (
+                <FaVolumeHigh className="w-5 h-5 text-white" alt="Volume High" />
+              ) : (
+                <FaVolumeXMark className="w-5 h-5 text-white" alt="Volume Muted" />
+              )}
             </div>
             <input
               type="range"
@@ -120,51 +133,67 @@ function App() {
                 className="flex flex-row items-center justify-center h-full gap-2 min-w-fit text-center rounded font-medium w-[30%] md:w-[20%] bg-[#1e1f24]
                   border-1 border-[#24252c] pr-2 pl-2 p-0"
               >
-                <img src="/logo.png" className="w-4 h-4" />
+                <img src="/logo.png" className="w-4 h-4" alt="Logo" />
                 <span className="text-[#78949d] flex items-center h-full text-[0.8rem] mr-auto">Portafolio de Kevin</span>
-                <IoMdClose className="text-[#78949d] text-[1rem]" />
+                <IoMdClose className="w-4 h-4 text-[#78949d]" alt="Close" />
               </div>
-              <IoMdAdd className="text-[#78949d] text-[1rem]" />
+              <IoMdAdd className="w-4 h-4 text-[#78949d]" alt="Add" />
             </div>
 
             <div className="flex flex-col relative items-center w-full h-full rounded-b-xl rounded-t-xl bg-[#1e1f24cb] border-1 border-[#24252c]">
-              <div className="w-full h-8 rounded-t-xl flex justify-between items-center font-medium p-[3px]">
-                <div className="flex-row hidden gap-2 ml-3 mr-auto md:flex">
-                  <Link to="/previous">
-                    <IoIosArrowBack className="text-[#78949d] text-[1.2rem] opacity-50 hover:opacity-100 transition-all duration-300 cursor-pointer" />
+              <div className="w-full h-8 rounded-t-xl flex justify-between items-center font-medium p-[3px] gap-3">
+                <div className="flex flex-row gap-3 ml-3 mr-auto">
+                  <Link to="/previous" aria-label="Anterior">
+                    <IoIosArrowBack
+                      className="w-5 h-5 text-[#78949d] hover:text-white transition-all duration-300 cursor-pointer"
+                      alt="Back"
+                    />
                   </Link>
 
-                  <Link to="/next">
-                    <IoIosArrowForward className="text-[#78949d] text-[1.2rem] opacity-50 hover:opacity-100 transition-all duration-300 cursor-pointer" />
+                  <Link to="/next" aria-label="Siguiente">
+                    <IoIosArrowForward
+                      className="w-5 h-5 text-[#78949d] hover:text-white transition-all duration-300 cursor-pointer"
+                      alt="Forward"
+                    />
                   </Link>
 
                   <IoReloadOutline
                     onClick={() => setIsFlipped(!isFlipped)}
-                    className="text-[#78949d] text-[1.1rem] ml-3 hover:scale-110 transition-all duration-300 cursor-pointer"
+                    className="w-5 h-5 text-[#78949d] hover:scale-110 transition-all duration-300 cursor-pointer"
+                    alt="Reload"
                   />
                 </div>
                 <div
                   className="flex flex-row rounded-md mr-auto bg-[#15161a] justify-start gap-3 items-center text-center text-[0.7rem] h-full w-full md:w-[60%]
                     p-2"
                 >
-                  <FaLock className="text-[#78949d] text-[0.9rem]" />
+                  <FaLock className="w-4 h-4 text-[#78949d]" alt="Lock" />
                   <span className="text-[#78949d] text-[0.9rem]">https://irregulaaar.vercel.app/</span>
                 </div>
 
                 <menu className="flex-row items-center justify-center hidden mr-3 md:flex">
-                  <IoMenu className="text-[#78949d] text-[1.3rem]" />
+                  <IoMenu className="w-5 h-5 text-[#78949d]" alt="Menu" />
                 </menu>
               </div>
               <div className="flex flex-row items-center w-full gap-3 p-1 pl-2 mb-1 h-7">
-                <a href="https://github.com/Irregulaar" target="_blank" rel="noopener noreferrer">
-                  <SiGithub className="text-[#fff] hover:text-white text-xl transition-all duration-300 cursor-pointer hover:scale-110" />
+                <a href="https://github.com/Irregulaar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <SiGithub
+                    className="w-6 h-6 text-white transition-all duration-300 cursor-pointer hover:text-white hover:scale-110"
+                    alt="GitHub"
+                  />
                 </a>
-                <a href="https://x.com/Irregulaaaar" target="_blank" rel="noopener noreferrer">
-                  <FaXTwitter className="text-xl text-black transition-all duration-300 cursor-pointer hover:scale-110" />
+                <a href="https://x.com/Irregulaaaar" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                  <FaXTwitter
+                    className="w-6 h-6 text-black transition-all duration-300 cursor-pointer hover:scale-110"
+                    alt="Twitter"
+                  />
                 </a>
 
                 <div className="relative group">
-                  <FaDiscord className="text-[#5865F2] text-xl transition-all duration-300 cursor-pointer hover:scale-110" />
+                  <FaDiscord
+                    className="w-6 h-6 text-[#5865F2] transition-all duration-300 cursor-pointer hover:scale-110"
+                    alt="Discord"
+                  />
                   <div
                     className="discord-tooltip absolute hidden group-hover:block bottom-0 left-0 bg-[#1a1a1a] text-[#9ca3af] text-xs px-2 py-1 rounded-md
                       whitespace-nowrap select-text cursor-pointer z-100"
@@ -184,8 +213,12 @@ function App() {
                   href="https://open.spotify.com/user/31fhfilaa7otr4c4buj3rcucuuwe?si=bce5c6e5b5384054"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Spotify"
                 >
-                  <SiSpotify className="text-[#1DB954] text-[1.3rem] transition-transform duration-300 cursor-pointer hover:scale-110" />
+                  <SiSpotify
+                    className="w-6 h-6 text-[#1DB954] transition-all duration-300 cursor-pointer hover:scale-110"
+                    alt="Spotify"
+                  />
                 </a>
 
                 <span
@@ -214,7 +247,15 @@ function App() {
                 </span>
               </div>
               <div className="relative w-full h-50">
-                <img src="/top.gif" className="absolute object-cover object-bottom w-full h-full mask-image" />
+                <video
+                  rel="preload"
+                  src="/top.mp4"
+                  alt="Video"
+                  className="absolute object-cover object-bottom w-full h-full mask-image"
+                  autoPlay
+                  muted
+                  loop
+                />
               </div>
 
               <style jsx>{`
@@ -225,7 +266,9 @@ function App() {
               `}</style>
 
               <div className="relative flex flex-col items-center w-full h-fit text-[#78949d] mt-10 mb-15">
-                <span className="text-center text-[4rem] leading-10 mb-4 text-shadow-lg/50 font-[false]">Kevin Sanchez</span>
+                <span className="text-center text-[4rem] leading-10 mb-4 text-shadow-lg/50 font-[false]" rel="preload">
+                  Kevin Sanchez
+                </span>
                 <TypedText texts={["Desarrollador Frontend"]} />
               </div>
 
@@ -235,9 +278,9 @@ function App() {
               >
                 <div
                   className="w-full h-10 bg-[#985dd36a] border-1 border-[#985dd3] rounded-md flex shadow-[0px_0px_10px_0px_#000000] shadow-[#985dd36a]
-                    justify-start items-center pl-2 flex-row gap-1"
+                    justify-start items-center pl-2 flex-row gap-3"
                 >
-                  <FaLightbulb className="text-[#b8a7c4] text-[1.2rem] font-medium" />
+                  <FaLightbulb className="w-5 h-5 text-[#b8a7c4]" alt="Technologies" />
                   <span className="text-[#b8a7c4] text-[1.3rem] font-[false]">Tecnologías</span>
                 </div>
                 <div className="w-[90%] flex flex-col items-center justify-center">
@@ -249,28 +292,28 @@ function App() {
                           className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
                             hover:scale-105 transition-transform"
                         >
-                          <SiHtml5 className="text-[#E34F26] text-xl" />
+                          <SiHTML5 className="w-5 h-5 text-[#E34F26]" alt="HTML5" />
                           HTML
                         </div>
                         <div
                           className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
                             hover:scale-105 transition-transform"
                         >
-                          <SiCss3 className="text-[#1572B6] text-xl" />
+                          <SiCSS3 className="w-5 h-5 text-[#1572B6]" alt="CSS3" />
                           CSS
                         </div>
                         <div
                           className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
                             hover:scale-105 transition-transform"
                         >
-                          <SiJavascript className="text-[#F7DF1E] text-xl" />
+                          <SiJavaScript className="w-5 h-5 text-[#F7DF1E]" alt="JavaScript" />
                           JavaScript
                         </div>
                         <div
                           className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
                             hover:scale-105 transition-transform"
                         >
-                          <SiPython className="text-[#3776AB] text-xl" />
+                          <SiPython className="w-5 h-5 text-[#3776AB]" alt="Python" />
                           Python
                         </div>
                       </div>
@@ -283,14 +326,14 @@ function App() {
                           className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
                             hover:scale-105 transition-transform"
                         >
-                          <SiReact className="text-[#61DAFB] text-xl" />
+                          <SiReact className="w-5 h-5 text-[#61DAFB]" alt="React" />
                           React
                         </div>
                         <div
                           className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
                             hover:scale-105 transition-transform"
                         >
-                          <SiTailwindcss className="text-[#06B6D4] text-xl" />
+                          <SiTailwindCSS className="w-5 h-5 text-[#06B6D4]" alt="Tailwind CSS" />
                           Tailwind
                         </div>
                       </div>
@@ -303,14 +346,14 @@ function App() {
                           className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
                             hover:scale-105 transition-transform"
                         >
-                          <SiGit className="text-[#F05032] text-xl" />
+                          <SiGit className="w-5 h-5 text-[#F05032]" alt="Git" />
                           Git
                         </div>
                         <div
                           className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
                             hover:scale-105 transition-transform"
                         >
-                          <SiGithub className="text-xl text-white" />
+                          <SiGithub className="w-5 h-5 text-white" alt="GitHub" />
                           GitHub
                         </div>
                       </div>
@@ -322,9 +365,9 @@ function App() {
               <div id="projects" className="w-[80%] flex flex-col justify-center items-center bg-[#16a34a34] mb-15 rounded-md">
                 <div
                   className="w-full h-10 bg-[#16a34a6a] border-1 border-[#16a34a] shadow-[0px_0px_10px_0px_#000000] shadow-[#16a34a] rounded-md mb-5 flex
-                    justify-start items-center pl-2 flex-row gap-1"
+                    justify-start items-center pl-2 flex-row gap-3"
                 >
-                  <FaCode className="text-[#8fcea6] text-[1.2rem] font-medium" />
+                  <FaCode className="w-5 h-5 text-[#8fcea6]" alt="Code" />
                   <span className="text-[#8fcea6] text-[1.3rem] font-[false]">Proyectos</span>
                 </div>
 
@@ -338,7 +381,10 @@ function App() {
                   >
                     <div className="flex flex-row items-center justify-between text-white">
                       <span className="text-xl font-medium terminal-font">Code Knockout</span>
-                      <FaExternalLinkAlt className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110" />
+                      <FaExternalLinkAlt
+                        className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110"
+                        alt="External Link"
+                      />
                     </div>
                     <span className="text-sm text-[#c9c9c9]">
                       Un sitio web dinámico para una competencia de programación con registro y tabla de clasificación.
@@ -371,7 +417,10 @@ function App() {
                   >
                     <div className="flex flex-row items-center justify-between text-white">
                       <span className="text-xl font-medium terminal-font">YourToDoo</span>
-                      <FaExternalLinkAlt className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110" />
+                      <FaExternalLinkAlt
+                        className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110"
+                        alt="External Link"
+                      />
                     </div>
                     <span className="text-sm text-[#c9c9c9]">Una aplicación de tareas con una interfaz limpia y moderna.</span>
                     <div className="relative w-full h-48 overflow-hidden rounded-lg">
@@ -402,7 +451,10 @@ function App() {
                   >
                     <div className="flex flex-row items-center justify-between text-white">
                       <span className="text-xl font-medium terminal-font">Simplest Web RPG</span>
-                      <FaExternalLinkAlt className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110" />
+                      <FaExternalLinkAlt
+                        className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110"
+                        alt="External Link"
+                      />
                     </div>
                     <span className="text-sm text-[#c9c9c9]">
                       Una aplicación de chat en tiempo real con funciones como compartir archivos y mensajes de voz.
@@ -435,7 +487,10 @@ function App() {
                   >
                     <div className="flex flex-row items-center justify-between text-white">
                       <span className="text-xl font-medium terminal-font">Noctis</span>
-                      <FaExternalLinkAlt className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110" />
+                      <FaExternalLinkAlt
+                        className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110"
+                        alt="External Link"
+                      />
                     </div>
                     <span className="text-sm text-[#c9c9c9]">
                       Una aplicación de chat en tiempo real con funciones como compartir archivos y mensajes de voz.
@@ -468,9 +523,9 @@ function App() {
               >
                 <div
                   className="w-full h-10 bg-[#e3e3e36a] border-1 border-[#c8c8c8] rounded-md flex shadow-[0px_0px_10px_0px_#000000] shadow-[#838383]
-                    justify-start pl-2 items-center gap-1 mb-5"
+                    justify-start pl-2 items-center gap-3 mb-5"
                 >
-                  <FaQuestion className="text-[#cecece] text-[1rem] font-regular" />
+                  <FaQuestion className="w-5 h-5 text-[#cecece]" alt="Question" />
                   <span className="text-[#cecece] text-[1.3rem] font-[false]">Sobre mí</span>
                 </div>
 
