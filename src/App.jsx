@@ -10,6 +10,7 @@ import { IoMdAdd } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaVolumeHigh } from "react-icons/fa6";
+import { FaVolumeXmark } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
 import { FaQuestion } from "react-icons/fa";
 import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTailwindcss, SiPython, SiGit, SiGithub, SiSpotify } from "react-icons/si";
@@ -18,6 +19,7 @@ import TypedText from "./TypedText";
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [previousVolume, setPreviousVolume] = useState(0.3);
 
   useEffect(() => {
     const audio = document.querySelector("audio");
@@ -30,7 +32,7 @@ function App() {
 
   useEffect(() => {
     const audio = document.querySelector("audio");
-    audio.volume = 0.3;
+    audio.volume = 0;
   }, []);
 
   return (
@@ -39,29 +41,55 @@ function App() {
       <div className="absolute left-0 flex flex-row items-center justify-center p-2 w-fit h-15">
         <audio src="/audio.mp3" loop />
         <div
-          className="w-fit h-full bg-[#191919b2] rounded-xl border-1 border-[#131313] shadow-[0px_0px_10px_0px_#000000] shadow-[#333333] opacity-90
-            flex items-center justify-center cursor-pointer p-2 gap-2 transition-transform duration-300"
-          onClick={() => {
+          className="group w-fit h-full bg-[#191919b2] rounded-xl border-1 border-[#131313] shadow-[0px_0px_10px_0px_#000000] shadow-[#333333]
+            opacity-90 flex items-center justify-center cursor-pointer p-2 gap-2 transition-transform duration-300"
+          onMouseEnter={() => {
             const input = document.querySelector('input[type="range"]');
-            input.classList.toggle("hidden");
-            setIsPlaying(true);
+            input.classList.remove("hidden");
+          }}
+          onMouseLeave={() => {
+            const input = document.querySelector('input[type="range"]');
+            input.classList.add("hidden");
           }}
         >
-          <div className="flex flex-col items-center justify-center gap-2">
-            <FaVolumeHigh className="text-2xl text-white" />
+          <div
+            onClick={() => {
+              if (isPlaying) {
+                const audio = document.querySelector("audio");
+                setPreviousVolume(audio.volume);
+                audio.volume = 0;
+                const input = document.querySelector('input[type="range"]');
+                input.value = 0;
+                setIsPlaying(false);
+              } else {
+                const audio = document.querySelector("audio");
+                audio.volume = previousVolume;
+                const input = document.querySelector('input[type="range"]');
+                input.value = previousVolume;
+                setIsPlaying(true);
+              }
+            }}
+            className="flex flex-col items-center justify-center gap-2"
+          >
+            {isPlaying ? <FaVolumeHigh className="text-2xl text-white" /> : <FaVolumeXmark className="text-2xl text-white" />}
           </div>
           <input
             type="range"
             min="0"
             max="1"
             step="0.1"
-            defaultValue="0.3"
+            defaultValue="0"
             className="hidden w-16 h-3 bg-[#0d0d0d8b] border-1 border-[#191919] rounded-lg appearance-none cursor-pointer
               [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3
               [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white"
             onChange={(e) => {
-              const audio = document.querySelector("audio");
-              audio.volume = e.target.value;
+              if (e.target.value === "0") {
+                setIsPlaying(false);
+              } else {
+                setIsPlaying(true);
+                const audio = document.querySelector("audio");
+                audio.volume = e.target.value;
+              }
             }}
           />
         </div>
@@ -437,9 +465,9 @@ function App() {
                         ¡Hola! Soy Kevin
                       </span>
                       <span className="text-[#cecece] text-[1rem] font-regular w-[90%] text-center md:text-start">
-                        Soy un chico colombiano de 20 años que comenzó con <strong>desarrollo web</strong> hace{" "}
-                        <strong>un mes</strong>. Ya sabía algo de programación, pero nunca había probado nada relacionado con{" "}
-                        <strong>frontend</strong>. Desde que empecé, lo he disfrutado mucho, especialmente la{" "}
+                        Un chico colombiano de 20 años que se adentro en el mundo del <strong>desarrollo web</strong> en{" "}
+                        <strong>marzo de 2025</strong>. Ya sabía algo de programación, pero nunca habia estudiado nada relacionado
+                        con <strong>frontend</strong>. Desde que empecé, lo he disfrutado mucho, especialmente la{" "}
                         <strong>parte visual</strong> y el <strong>diseño</strong>. Todavía estoy aprendiendo, pero me gusta cada
                         vez más.
                       </span>
