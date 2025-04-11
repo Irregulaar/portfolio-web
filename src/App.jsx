@@ -133,7 +133,7 @@ function App() {
                 className="flex flex-row items-center justify-center h-full gap-2 min-w-fit text-center rounded font-medium w-[30%] md:w-[20%] bg-[#1e1f24]
                   border-1 border-[#24252c] pr-2 pl-2 p-0"
               >
-                <img src="/logo.webp" className="w-4 h-4" alt="Logo" />
+                <img src="/logo.png" className="w-4 h-4" alt="Logo" />
                 <span className="text-[#78949d] flex items-center h-full text-[0.8rem] mr-auto">Portafolio de Kevin</span>
                 <IoMdClose className="w-4 h-4 text-[#78949d]" alt="Close" />
               </div>
