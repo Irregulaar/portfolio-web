@@ -12,8 +12,10 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaVolumeHigh } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
 import { FaQuestion } from "react-icons/fa";
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTailwindcss, SiPython, SiGit, SiGithub } from "react-icons/si";
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTailwindcss, SiPython, SiGit, SiGithub, SiSpotify } from "react-icons/si";
+import { FaXTwitter, FaDiscord } from "react-icons/fa6";
 import TypedText from "./TypedText";
+
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -80,7 +82,7 @@ function App() {
                 border-1 border-[#24252c] pr-2 pl-2 p-0"
             >
               <img src="/logo.png" className="w-4 h-4" />
-              <span className="text-[#78949d] flex items-center h-full text-[0.8rem] mr-auto">Kevin's Portfolio</span>
+              <span className="text-[#78949d] flex items-center h-full text-[0.8rem] mr-auto">Portafolio de Kevin</span>
               <IoMdClose className="text-[#78949d] text-[1rem]" />
             </div>
             <IoMdAdd className="text-[#78949d] text-[1rem]" />
@@ -107,33 +109,17 @@ function App() {
             </div>
             <div className="flex flex-row items-center w-full gap-3 p-1 pl-2 mb-1 h-7">
               <a href="https://github.com/Irregulaar" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/technologies/github.webp"
-                  className="object-contain w-5 h-full transition-transform duration-300 cursor-pointer hover:scale-110"
-                />
+                <SiGithub className="text-[#fff] hover:text-white text-xl transition-all duration-300 cursor-pointer hover:scale-110" />
               </a>
               <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/socials/twitter.webp"
-                  className="object-contain w-5 h-full transition-transform duration-300 cursor-pointer hover:scale-110"
-                />
+                <FaXTwitter className="text-xl text-black transition-all duration-300 cursor-pointer hover:scale-110" />
               </a>
-              {/*
-              <a href="/" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/socials/instagram.png"
-                  className="object-contain w-5 h-full transition-transform duration-300 cursor-pointer hover:scale-110"
-                />
-              </a> */}
 
               <div className="relative group">
-                <img
-                  src="/socials/discord.webp"
-                  className="object-contain w-5 h-full transition-transform duration-300 cursor-pointer hover:scale-110"
-                />
+                <FaDiscord className="text-[#5865F2] text-xl transition-all duration-300 cursor-pointer hover:scale-110" />
                 <div
                   className="discord-tooltip absolute hidden group-hover:block bottom-0 left-0 bg-[#1a1a1a] text-[#9ca3af] text-xs px-2 py-1 rounded-md
-                    whitespace-nowrap select-text cursor-pointer"
+                    whitespace-nowrap select-text cursor-pointer z-100"
                   onClick={() => {
                     navigator.clipboard.writeText("irregulaaar");
                     const tooltip = document.querySelector(".discord-tooltip");
@@ -146,13 +132,17 @@ function App() {
                   @irregulaaar
                 </div>
               </div>
+              <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">
+                <SiSpotify className="text-[#1DB954] text-[1.3rem] transition-transform duration-300 cursor-pointer hover:scale-110" />
+              </a>
+
               <span
                 className="text-[#78949d] text-[10px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300 z-10"
                 onClick={() => {
                   document.getElementById("technologies").scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                /Technologies
+                /Tecnologías
               </span>
               <span
                 className="text-[#78949d] text-[10px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300 z-10"
@@ -160,7 +150,7 @@ function App() {
                   document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                /Projects
+                /Proyectos
               </span>
               <span
                 className="text-[#78949d] text-[10px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300 z-10"
@@ -168,7 +158,7 @@ function App() {
                   document.getElementById("about").scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                /About
+                /Sobre mí
               </span>
             </div>
             <div className="relative w-full h-50">
@@ -184,7 +174,7 @@ function App() {
 
             <div className="relative flex flex-col items-center w-full h-fit text-[#78949d] mt-10 mb-15">
               <span className="text-center text-[4rem] leading-10 mb-4 text-shadow-lg/50 font-[false]">Kevin Sanchez</span>
-              <TypedText texts={["Frontend Developer"]} />
+              <TypedText texts={["Desarrollador Frontend"]} />
             </div>
 
             <div id="technologies" className="w-[80%] flex flex-col justify-center items-center bg-[#9e75c734] mb-15 rounded-md">
@@ -193,12 +183,12 @@ function App() {
                   justify-start items-center pl-2 flex-row gap-1"
               >
                 <FaLightbulb className="text-[#b8a7c4] text-[1.2rem] font-medium" />
-                <span className="text-[#b8a7c4] text-[1.3rem] font-[false]">Technologies</span>
+                <span className="text-[#b8a7c4] text-[1.3rem] font-[false]">Tecnologías</span>
               </div>
 
               <div className="flex flex-col items-center justify-center w-full gap-5 mb-5">
                 <div className="flex flex-col items-center justify-center mt-5">
-                  <h3 className="mb-2 text-lg font-medium text-[#b8a7c4]">Languages</h3>
+                  <h3 className="mb-2 text-lg font-medium text-[#b8a7c4]">Lenguajes</h3>
                   <div className="flex flex-wrap items-center gap-2">
                     <div
                       className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
@@ -252,7 +242,7 @@ function App() {
                 </div>
 
                 <div className="flex flex-col items-center justify-center">
-                  <h3 className="mb-2 text-lg font-medium text-[#b8a7c4]">Tools</h3>
+                  <h3 className="mb-2 text-lg font-medium text-[#b8a7c4]">Herramientas</h3>
                   <div className="flex flex-wrap items-center gap-2">
                     <div
                       className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
@@ -279,7 +269,7 @@ function App() {
                   justify-start items-center pl-2 flex-row gap-1"
               >
                 <FaCode className="text-[#8fcea6] text-[1.2rem] font-medium" />
-                <span className="text-[#8fcea6] text-[1.3rem] font-[false]">Projects</span>
+                <span className="text-[#8fcea6] text-[1.3rem] font-[false]">Proyectos</span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-[95%] mb-5">
@@ -295,7 +285,7 @@ function App() {
                     <FaExternalLinkAlt className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110" />
                   </div>
                   <span className="text-sm text-[#c9c9c9]">
-                    A dynamic website for a coding competition with registration and leaderboards.
+                    Un sitio web dinámico para una competencia de programación con registro y tabla de clasificación.
                   </span>
                   <div className="relative w-full h-48 mt-auto overflow-hidden rounded-lg">
                     <img
@@ -327,7 +317,7 @@ function App() {
                     <span className="text-xl font-medium terminal-font">YourToDoo</span>
                     <FaExternalLinkAlt className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110" />
                   </div>
-                  <span className="text-sm text-[#c9c9c9]">A simple to-do list app with a clean, modern interface.</span>
+                  <span className="text-sm text-[#c9c9c9]">Una aplicación de tareas con una interfaz limpia y moderna.</span>
                   <div className="relative w-full h-48 overflow-hidden rounded-lg">
                     <img
                       src="/projects/yourtodoo.webp"
@@ -359,7 +349,7 @@ function App() {
                     <FaExternalLinkAlt className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110" />
                   </div>
                   <span className="text-sm text-[#c9c9c9]">
-                    An interactive browser-based RPG with character progression and turn-based combat.
+                    Una aplicación de chat en tiempo real con funciones como compartir archivos y mensajes de voz.
                   </span>
                   <div className="relative w-full h-48 overflow-hidden rounded-lg">
                     <img
@@ -392,7 +382,7 @@ function App() {
                     <FaExternalLinkAlt className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110" />
                   </div>
                   <span className="text-sm text-[#c9c9c9]">
-                    A real-time chat application with features like file sharing and voice messages.
+                    Una aplicación de chat en tiempo real con funciones como compartir archivos y mensajes de voz.
                   </span>
                   <div className="relative w-full h-48 overflow-hidden rounded-lg">
                     <img
@@ -425,7 +415,7 @@ function App() {
                   justify-start pl-2 items-center gap-1 mb-5"
               >
                 <FaQuestion className="text-[#cecece] text-[1rem] font-regular" />
-                <span className="text-[#cecece] text-[1.3rem] font-[false]">About</span>
+                <span className="text-[#cecece] text-[1.3rem] font-[false]">Sobre mí</span>
               </div>
 
               <div className="flex flex-row flex-wrap items-center justify-center w-full gap-4 p-5 pt-0 pb-0 mb-7">
@@ -437,28 +427,29 @@ function App() {
                   </div>
 
                   <div className="flex flex-col items-start justify-start gap-2">
-                    <span className="text-[#cecece] text-[2rem] font-regular w-[90%] text-start">¡Hola! I'm Kevin</span>
+                    <span className="text-[#cecece] text-[2rem] font-regular w-[90%] text-start">¡Hola! Soy Kevin</span>
                     <span className="text-[#cecece] text-[1rem] font-regular w-[90%] text-start">
-                      I'm a 20-year-old Colombian guy who started with <strong>web development</strong> about{" "}
-                      <strong>a month ago</strong>. I already knew some programming, but I had never tried anything related to{" "}
-                      <strong>frontend</strong>. Since I started, I've really enjoyed it, especially the{" "}
-                      <strong>visual part</strong> and <strong>design</strong>. I'm still learning, but I'm liking it more and
-                      more.
+                      Soy un chico colombiano de 20 años que comenzó con <strong>desarrollo web</strong> hace{" "}
+                      <strong>un mes</strong>. Ya sabía algo de programación, pero nunca había probado nada relacionado con{" "}
+                      <strong>frontend</strong>. Desde que empecé, lo he disfrutado mucho, especialmente la{" "}
+                      <strong>parte visual</strong> y el <strong>diseño</strong>. Todavía estoy aprendiendo, pero me gusta cada
+                      vez más.
                     </span>
                   </div>
                   <div className="grid items-center w-full grid-cols-1 col-span-2 gap-4 mt-2 md:grid-cols-2 text-[#cecece]">
                     <div className="bg-[#e3e3e336] p-4 rounded-lg border-1 border-[#c8c8c8] h-full">
-                      <h3 className="mb-2 font-medium">Current Focus</h3>
+                      <h3 className="mb-2 font-medium">Enfoque Actual</h3>
                       <p className="text-sm">
-                        I'm currently focusing on mastering React and expanding my knowledge of modern frontend frameworks.
+                        Actualmente me estoy enfocando en dominar React y expandir mi conocimiento en frameworks frontend
+                        modernos.
                       </p>
                     </div>
 
                     <div className="bg-[#e3e3e336] p-4 rounded-lg border-1 border-[#c8c8c8] h-full">
-                      <h3 className="mb-2 font-medium terminal-font">Future Goals</h3>
+                      <h3 className="mb-2 font-medium terminal-font">Objetivos Futuros</h3>
                       <p className="text-sm">
-                        I aim to become a full-stack developer, learning backend technologies and creating complete web
-                        applications.
+                        Mi objetivo es convertirme en desarrollador full-stack, aprendiendo tecnologías backend y creando
+                        aplicaciones web completas.
                       </p>
                     </div>
                   </div>
@@ -470,9 +461,9 @@ function App() {
       </div>
       <div className="text-[#fff] text-center font-regular flex-row flex gap-10 mt-20">
         <p>
-          Made with <span className="text-red-500">❤</span> by Irregular
+          Hecho con <span className="text-red-500">❤</span> por Irregular
         </p>
-        <p className="opacity-70">Last updated: April 2025</p>
+        <p className="opacity-70">Última actualización: Abril 2025</p>
       </div>
     </div>
   );
