@@ -111,7 +111,7 @@ function App() {
               <a href="https://github.com/Irregulaar" target="_blank" rel="noopener noreferrer">
                 <SiGithub className="text-[#fff] hover:text-white text-xl transition-all duration-300 cursor-pointer hover:scale-110" />
               </a>
-              <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/Irregulaaaar" target="_blank" rel="noopener noreferrer">
                 <FaXTwitter className="text-xl text-black transition-all duration-300 cursor-pointer hover:scale-110" />
               </a>
 
@@ -132,7 +132,11 @@ function App() {
                   @irregulaaar
                 </div>
               </div>
-              <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://open.spotify.com/user/31fhfilaa7otr4c4buj3rcucuuwe?si=bce5c6e5b5384054"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <SiSpotify className="text-[#1DB954] text-[1.3rem] transition-transform duration-300 cursor-pointer hover:scale-110" />
               </a>
 
@@ -275,7 +279,7 @@ function App() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-[95%] mb-5">
                 <a
-                  href="https://simplestwebrpg.vercel.app/"
+                  href="https://codeknockout.onrender.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-col gap-3 bg-[#1a1a1a] p-5 rounded-lg border-1 border-[#2f2f2f] transition-all duration-300 card-3d
@@ -308,7 +312,7 @@ function App() {
                   </div>
                 </a>
                 <a
-                  href="https://simplestwebrpg.vercel.app/"
+                  href="https://yourtodoo.onrender.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-col gap-3 bg-[#1a1a1a] p-5 rounded-lg border-1 border-[#2f2f2f] transition-all duration-300 card-3d
@@ -372,7 +376,7 @@ function App() {
                   </div>
                 </a>
                 <a
-                  href="https://simplestwebrpg.vercel.app/"
+                  href="https://noctis-jq9a.onrender.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex flex-col gap-3 bg-[#1a1a1a] p-5 rounded-lg border-1 border-[#2f2f2f] transition-all duration-300 card-3d
