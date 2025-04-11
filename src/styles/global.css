@@ -22,6 +22,10 @@
   }
 }
 
+.flip {
+  rotate: 180deg;
+}
+
 body {
   font-family: "Satoshi Variable", sans-serif;
   background-color: #191919;
