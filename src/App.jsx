@@ -178,20 +178,20 @@ function App() {
               <div className="flex flex-row items-center w-full gap-3 p-1 pl-2 mb-1 h-7">
                 <a href="https://github.com/Irregulaar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <SiGithub
-                    className="w-6 h-6 text-white transition-all duration-300 cursor-pointer hover:text-white hover:scale-110"
+                    className="w-4 h-4 text-white transition-all duration-300 cursor-pointer hover:text-white hover:scale-110"
                     alt="GitHub"
                   />
                 </a>
                 <a href="https://x.com/Irregulaaaar" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <FaXTwitter
-                    className="w-6 h-6 text-black transition-all duration-300 cursor-pointer hover:scale-110"
+                    className="w-4 h-4 text-black transition-all duration-300 cursor-pointer hover:scale-110"
                     alt="Twitter"
                   />
                 </a>
 
                 <div className="relative group">
                   <FaDiscord
-                    className="w-6 h-6 text-[#5865F2] transition-all duration-300 cursor-pointer hover:scale-110"
+                    className="w-4 h-4 text-[#5865F2] transition-all duration-300 cursor-pointer hover:scale-110"
                     alt="Discord"
                   />
                   <div
@@ -216,7 +216,7 @@ function App() {
                   aria-label="Spotify"
                 >
                   <SiSpotify
-                    className="w-6 h-6 text-[#1DB954] transition-all duration-300 cursor-pointer hover:scale-110"
+                    className="w-4 h-4 text-[#1DB954] transition-all duration-300 cursor-pointer hover:scale-110"
                     alt="Spotify"
                   />
                 </a>
