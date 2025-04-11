@@ -8,29 +8,19 @@ const TypedText = ({ texts, typingSpeed = 100, eraseSpeed = 50, delayBetweenText
   useEffect(() => {
     let timeout;
 
-    if (isTyping) {
-      // Escribir texto
-      if (displayText.length < texts[currentIndex].length) {
-        timeout = setTimeout(() => {
-          setDisplayText(texts[currentIndex].substring(0, displayText.length + 1));
-        }, typingSpeed);
-      } else {
-        // Al terminar de escribir, esperar antes de borrar
-        timeout = setTimeout(() => {
-          setIsTyping(false);
-        }, delayBetweenTexts);
-      }
+    if (isTyping && displayText.length < texts[currentIndex].length) {
+      timeout = setTimeout(() => {
+        setDisplayText(texts[currentIndex].substring(0, displayText.length + 1));
+      }, typingSpeed);
+    } else if (isTyping) {
+      timeout = setTimeout(() => setIsTyping(false), delayBetweenTexts);
+    } else if (displayText.length > 0) {
+      timeout = setTimeout(() => {
+        setDisplayText(displayText.substring(0, displayText.length - 1));
+      }, eraseSpeed);
     } else {
-      // Borrar texto
-      if (displayText.length > 0) {
-        timeout = setTimeout(() => {
-          setDisplayText(displayText.substring(0, displayText.length - 1));
-        }, eraseSpeed);
-      } else {
-        // Al terminar de borrar, cambiar al siguiente texto
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-        setIsTyping(true);
-      }
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+      setIsTyping(true);
     }
 
     return () => clearTimeout(timeout);
