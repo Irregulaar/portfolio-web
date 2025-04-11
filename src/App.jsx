@@ -393,6 +393,7 @@ function App() {
                       <img
                         src="/projects/codeknockout.webp"
                         className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
+                        alt="Code Knockout"
                       />
                       <div
                         className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity
@@ -426,6 +427,7 @@ function App() {
                     <div className="relative w-full h-48 overflow-hidden rounded-lg">
                       <img
                         src="/projects/yourtodoo.webp"
+                        alt="YourToDoo"
                         className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                       />
                       <div
@@ -462,6 +464,7 @@ function App() {
                     <div className="relative w-full h-48 overflow-hidden rounded-lg">
                       <img
                         src="/projects/simplestwebrpg.webp"
+                        alt="Simplest Web RPG"
                         className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                       />
                       <div
@@ -498,6 +501,7 @@ function App() {
                     <div className="relative w-full h-48 overflow-hidden rounded-lg">
                       <img
                         src="/projects/noctis.webp"
+                        alt="Noctis"
                         className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                       />
                       <div
@@ -534,7 +538,7 @@ function App() {
                     <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
                       <div className="w-50 h-50">
                         <div className="w-full h-full overflow-hidden rounded-full border-2 border-[#2f2f2f]">
-                          <img src="/pfp.webp" className="object-cover object-top w-full h-full" />
+                          <img src="/pfp.webp" className="object-cover object-top w-full h-full" alt="PFP" />
                         </div>
                       </div>
 
