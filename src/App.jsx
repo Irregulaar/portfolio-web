@@ -185,78 +185,79 @@ function App() {
                 <FaLightbulb className="text-[#b8a7c4] text-[1.2rem] font-medium" />
                 <span className="text-[#b8a7c4] text-[1.3rem] font-[false]">Tecnologías</span>
               </div>
-
-              <div className="flex flex-col items-center justify-center w-full gap-5 mb-5">
-                <div className="flex flex-col items-center justify-center mt-5">
-                  <h3 className="mb-2 text-lg font-medium text-[#b8a7c4]">Lenguajes</h3>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <div
-                      className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                        hover:scale-105 transition-transform"
-                    >
-                      <SiHtml5 className="text-[#E34F26] text-xl" />
-                      HTML
-                    </div>
-                    <div
-                      className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                        hover:scale-105 transition-transform"
-                    >
-                      <SiCss3 className="text-[#1572B6] text-xl" />
-                      CSS
-                    </div>
-                    <div
-                      className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                        hover:scale-105 transition-transform"
-                    >
-                      <SiJavascript className="text-[#F7DF1E] text-xl" />
-                      JavaScript
-                    </div>
-                    <div
-                      className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                        hover:scale-105 transition-transform"
-                    >
-                      <SiPython className="text-[#3776AB] text-xl" />
-                      Python
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center justify-center">
-                  <h3 className="mb-2 text-lg font-medium text-[#b8a7c4]">Frameworks</h3>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <div
-                      className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                        hover:scale-105 transition-transform"
-                    >
-                      <SiReact className="text-[#61DAFB] text-xl" />
-                      React
-                    </div>
-                    <div
-                      className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                        hover:scale-105 transition-transform"
-                    >
-                      <SiTailwindcss className="text-[#06B6D4] text-xl" />
-                      Tailwind
+              <div className="w-[90%] flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center justify-center w-full gap-5 mb-5">
+                  <div className="flex flex-col items-center justify-center mt-5">
+                    <h3 className="mb-2 text-lg font-medium text-[#b8a7c4]">Lenguajes</h3>
+                    <div className="flex flex-wrap items-center justify-center gap-2">
+                      <div
+                        className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
+                          hover:scale-105 transition-transform"
+                      >
+                        <SiHtml5 className="text-[#E34F26] text-xl" />
+                        HTML
+                      </div>
+                      <div
+                        className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
+                          hover:scale-105 transition-transform"
+                      >
+                        <SiCss3 className="text-[#1572B6] text-xl" />
+                        CSS
+                      </div>
+                      <div
+                        className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
+                          hover:scale-105 transition-transform"
+                      >
+                        <SiJavascript className="text-[#F7DF1E] text-xl" />
+                        JavaScript
+                      </div>
+                      <div
+                        className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
+                          hover:scale-105 transition-transform"
+                      >
+                        <SiPython className="text-[#3776AB] text-xl" />
+                        Python
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="flex flex-col items-center justify-center">
-                  <h3 className="mb-2 text-lg font-medium text-[#b8a7c4]">Herramientas</h3>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <div
-                      className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                        hover:scale-105 transition-transform"
-                    >
-                      <SiGit className="text-[#F05032] text-xl" />
-                      Git
+                  <div className="flex flex-col items-center justify-center">
+                    <h3 className="mb-2 text-lg font-medium text-[#b8a7c4]">Frameworks</h3>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <div
+                        className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
+                          hover:scale-105 transition-transform"
+                      >
+                        <SiReact className="text-[#61DAFB] text-xl" />
+                        React
+                      </div>
+                      <div
+                        className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
+                          hover:scale-105 transition-transform"
+                      >
+                        <SiTailwindcss className="text-[#06B6D4] text-xl" />
+                        Tailwind
+                      </div>
                     </div>
-                    <div
-                      className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                        hover:scale-105 transition-transform"
-                    >
-                      <SiGithub className="text-xl text-white" />
-                      GitHub
+                  </div>
+
+                  <div className="flex flex-col items-center justify-center">
+                    <h3 className="mb-2 text-lg font-medium text-[#b8a7c4]">Herramientas</h3>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <div
+                        className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
+                          hover:scale-105 transition-transform"
+                      >
+                        <SiGit className="text-[#F05032] text-xl" />
+                        Git
+                      </div>
+                      <div
+                        className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
+                          hover:scale-105 transition-transform"
+                      >
+                        <SiGithub className="text-xl text-white" />
+                        GitHub
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -419,24 +420,29 @@ function App() {
               </div>
 
               <div className="flex flex-row flex-wrap items-center justify-center w-full gap-4 p-5 pt-0 pb-0 mb-7">
-                <div className="grid items-center w-full grid-cols-1 place-content-center gap-8 place-items-center md:grid-cols-[auto_auto] md:justify-start">
-                  <div className="w-50 h-50">
-                    <div className="w-full h-full overflow-hidden rounded-full border-2 border-[#2f2f2f]">
-                      <img src="/pfp.webp" className="object-cover object-top w-full h-full" />
+                <div className="flex flex-col w-full gap-8">
+                  <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
+                    <div className="w-50 h-50">
+                      <div className="w-full h-full overflow-hidden rounded-full border-2 border-[#2f2f2f]">
+                        <img src="/pfp.webp" className="object-cover object-top w-full h-full" />
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-center justify-start flex-1 gap-2 md:items-start">
+                      <span className="text-[#cecece] text-[2rem] font-regular w-[90%] text-center md:text-start">
+                        ¡Hola! Soy Kevin
+                      </span>
+                      <span className="text-[#cecece] text-[1rem] font-regular w-[90%] text-center md:text-start">
+                        Soy un chico colombiano de 20 años que comenzó con <strong>desarrollo web</strong> hace{" "}
+                        <strong>un mes</strong>. Ya sabía algo de programación, pero nunca había probado nada relacionado con{" "}
+                        <strong>frontend</strong>. Desde que empecé, lo he disfrutado mucho, especialmente la{" "}
+                        <strong>parte visual</strong> y el <strong>diseño</strong>. Todavía estoy aprendiendo, pero me gusta cada
+                        vez más.
+                      </span>
                     </div>
                   </div>
 
-                  <div className="flex flex-col items-start justify-start gap-2">
-                    <span className="text-[#cecece] text-[2rem] font-regular w-[90%] text-start">¡Hola! Soy Kevin</span>
-                    <span className="text-[#cecece] text-[1rem] font-regular w-[90%] text-start">
-                      Soy un chico colombiano de 20 años que comenzó con <strong>desarrollo web</strong> hace{" "}
-                      <strong>un mes</strong>. Ya sabía algo de programación, pero nunca había probado nada relacionado con{" "}
-                      <strong>frontend</strong>. Desde que empecé, lo he disfrutado mucho, especialmente la{" "}
-                      <strong>parte visual</strong> y el <strong>diseño</strong>. Todavía estoy aprendiendo, pero me gusta cada
-                      vez más.
-                    </span>
-                  </div>
-                  <div className="grid items-center w-full grid-cols-1 col-span-2 gap-4 mt-2 md:grid-cols-2 text-[#cecece]">
+                  <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 text-[#cecece]">
                     <div className="bg-[#e3e3e336] p-4 rounded-lg border-1 border-[#c8c8c8] h-full">
                       <h3 className="mb-2 font-medium">Enfoque Actual</h3>
                       <p className="text-sm">
@@ -459,7 +465,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="text-[#fff] text-center font-regular flex-row flex gap-10 mt-20">
+      <div className="text-[#fff] text-center font-regular flex-row flex gap-10 mt-20 text-[12px]">
         <p>
           Hecho con <span className="text-red-500">❤</span> por Irregular
         </p>
