@@ -422,7 +422,7 @@ function App() {
                     />
                     <div className="absolute w-full h-fit flex items-center gap-1 justify-end p-1 text-white">
                       <a
-                        href="https://codeknockouoot.onrender.com"
+                        href="https://github.com/Irregulaar/CodeKnockout"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-7 h-7 bg-black/70 rounded p-1 flex justify-center items-center duration-300 opacity-50 group-hover:opacity-100 z-100"
@@ -463,7 +463,7 @@ function App() {
                     />
                     <div className="absolute w-full h-fit flex items-center gap-1 justify-end p-1 text-white">
                       <a
-                        href="https://yourtodoo.onrender.com"
+                        href="https://github.com/Irregulaar/To-Do"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-7 h-7 bg-black/70 rounded p-1 flex justify-center items-center duration-300 opacity-50 group-hover:opacity-100 z-100"
@@ -500,7 +500,7 @@ function App() {
                     />
                     <div className="absolute w-full h-fit flex items-center gap-1 justify-end p-1 text-white">
                       <a
-                        href="https://simplestwebrpg.vercel.app/"
+                        href="https://github.com/Irregulaar/Simplest-Web-RPG"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-7 h-7 bg-black/70 rounded p-1 flex justify-center items-center duration-300 opacity-50 group-hover:opacity-100 z-100"
@@ -539,7 +539,7 @@ function App() {
                     />
                     <div className="absolute w-full h-fit flex items-center gap-1 justify-end p-1 text-white">
                       <a
-                        href="https://noctis-jq9a.onrender.com"
+                        href="https://github.com/Autisogino-Organization/Noctis"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-7 h-7 bg-black/70 rounded p-1 flex justify-center items-center duration-300 opacity-50 group-hover:opacity-100 z-100"
