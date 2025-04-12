@@ -55,7 +55,7 @@ function Previous() {
         el tamaño de un átomo, pero ya contenía toda la energía que existe hoy. Temperatura: más de un billón de grados Celsius.
         No había luz, solo pura locura cósmica. En ese instante, las leyes de la física todavía estaban calentando motores. No
         había materia, solo energía super loca viajando a la velocidad de la luz. Todo lo que conoces estaba comprimido en un
-        punto más pequeño que un pixel. No hay nada más por descubrir aquí
+        punto más pequeño que un pixel.
       </span>
 
       <Link
