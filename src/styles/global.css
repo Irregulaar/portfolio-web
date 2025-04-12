@@ -11,7 +11,7 @@
 @font-face {
   font-family: "Satoshi Variable";
   src: url("/fonts/normal.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -35,7 +35,7 @@ body {
 }
 
 strong {
-  color: #999fc1;
+  color: #8396ff;
 }
 
 body::-webkit-scrollbar {
