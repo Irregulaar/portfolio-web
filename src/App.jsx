@@ -27,6 +27,8 @@ import SiReact from "./icons/sireact.svg?react";
 import SiSpotify from "./icons/sispotify.svg?react";
 import SiTailwindCSS from "./icons/sitailwindcss.svg?react";
 import FaLink from "./icons/falink.svg?react";
+import FaYoutube from "./icons/fayoutube.svg?react";
+import AiFillInstagram from "./icons/aifillinstagram.svg?react";
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -120,8 +122,8 @@ function App() {
           </div>
         </div>
         <div
-          className="relative w-[90%] md:w-[70%] h-fit bg-[#191919b2] rounded-xl shadow-[0px_0px_100px_10px_#000000] shadow-black p-0.5 border-1
-            border-[#24252c] mt-20 mb-20"
+          className={`relative w-[90%] md:w-[70%] h-fit bg-[#191919b2] rounded-xl shadow-[0px_0px_100px_10px_#000000] shadow-black p-0.5 border-1
+            border-[#24252c] mt-20 mb-20`}
         >
           <div className="relative z-10 flex flex-col items-start justify-start w-full h-full">
             <div className="flex flex-row items-center gap-2 p-1 pt-0.5 pl-2 h-7 bg-[#191919] rounded-t-xl w-full">
@@ -179,7 +181,7 @@ function App() {
                   <IoMenu className="w-5 h-5 text-[#78949d]" alt="Menu" />
                 </menu>
               </div>
-              <div className="flex flex-row items-center w-full gap-3 p-1 pl-2 pb-2 h-7 bg-[#1e1f24]">
+              <div className="flex flex-row items-center w-full gap-3 p-1 pl-2 pb-2 h-fit bg-[#1e1f24] flex-wrap">
                 <a href="https://github.com/Irregulaar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <SiGithub
                     className="w-4 h-4 text-white transition-all duration-300 cursor-pointer hover:text-white hover:scale-110"
@@ -225,33 +227,52 @@ function App() {
                   />
                 </a>
 
-                <span
-                  className="text-[#78949d] text-[9px] text-nowrap md:text-[12px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300
-                    z-10"
-                  onClick={() => {
-                    document.getElementById("technologies").scrollIntoView({ behavior: "smooth" });
-                  }}
+                <a href="https://www.youtube.com/@irregulaar" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                  <FaYoutube
+                    className="w-4 h-4 text-[#FF0000] transition-all duration-300 cursor-pointer hover:scale-110"
+                    alt="YouTube"
+                  />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/irregulaar_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-[#833AB4] via-[#C13584] to-[#F77737] transition-all duration-300
+                    cursor-pointer hover:scale-110"
                 >
-                  /Tecnologías
-                </span>
-                <span
-                  className="text-[#78949d] text-[9px] text-nowrap md:text-[12px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300
-                    z-10"
-                  onClick={() => {
-                    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  /Proyectos
-                </span>
-                <span
-                  className="text-[#78949d] text-[9px] text-nowrap md:text-[12px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300
-                    z-10"
-                  onClick={() => {
-                    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  /Sobre mí
-                </span>
+                  <AiFillInstagram className="w-5 h-5" />
+                </a>
+                <div className="flex flex-row gap-2 justify-center items-center">
+                  <span
+                    className="text-[#78949d] text-[9px] text-nowrap md:text-[12px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300
+                      z-10"
+                    onClick={() => {
+                      document.getElementById("technologies").scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    /Tecnologías
+                  </span>
+                  <span
+                    className="text-[#78949d] text-[9px] text-nowrap md:text-[12px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300
+                      z-10"
+                    onClick={() => {
+                      document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    /Proyectos
+                  </span>
+                  <span
+                    className="text-[#78949d] text-[9px] text-nowrap md:text-[12px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300
+                      z-10"
+                    onClick={() => {
+                      document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    /Sobre mí
+                  </span>
+                </div>
               </div>
               <div className="relative w-full h-50">
                 <video
