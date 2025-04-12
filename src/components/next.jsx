@@ -13,7 +13,8 @@ function Next() {
       <Link
         to="/"
         className="z-10 flex bg-[#ffffff] w-fit p-2 items-center justify-center text-1xl text-center hover:bg-[#141414]/80 duration-300
-          bg-gradient-to-r from-gray-800 to-black text-white px-4 py-2 rounded-lg hover:scale-105 transition transform shadow-lg"
+          bg-gradient-to-r from-gray-800 to-black text-white px-4 py-2 rounded-lg hover:scale-105 transition transform shadow-lg
+          font-[false]"
       >
         Volver al presente
       </Link>

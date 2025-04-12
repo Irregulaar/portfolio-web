@@ -26,6 +26,7 @@ import SiPython from "./icons/sipython.svg?react";
 import SiReact from "./icons/sireact.svg?react";
 import SiSpotify from "./icons/sispotify.svg?react";
 import SiTailwindCSS from "./icons/sitailwindcss.svg?react";
+import FaLink from "./icons/falink.svg?react";
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -120,7 +121,7 @@ function App() {
         </div>
         <div
           className="relative w-[90%] md:w-[70%] h-fit bg-[#191919b2] rounded-xl shadow-[0px_0px_100px_10px_#000000] shadow-black p-0.5 border-1
-            border-[#24252c] mt-20"
+            border-[#24252c] mt-20 mb-20"
         >
           <div className="relative z-10 flex flex-col items-start justify-start w-full h-full">
             <div className="flex flex-row items-center gap-2 p-1 pt-0.5 pl-2 h-7 bg-[#191919] rounded-t-xl w-full">
@@ -140,8 +141,11 @@ function App() {
               <IoMdAdd className="w-4 h-4 text-[#78949d]" alt="Add" />
             </div>
 
-            <div className="flex flex-col relative items-center w-full h-full rounded-b-xl rounded-t-xl bg-[#1e1f24cb] border-1 border-[#24252c]">
-              <div className="w-full h-8 rounded-t-xl flex justify-between items-center font-medium p-[3px] gap-3">
+            <div
+              className="flex flex-col relative items-center w-full h-full rounded-b-xl rounded-t-xl bg-transparent border-1 backdrop-blur-sm
+                border-[#24252c]"
+            >
+              <div className="w-full h-8 rounded-t-xl flex justify-between items-center font-medium p-[3px] gap-3 bg-[#1e1f24]">
                 <div className="flex flex-row gap-3 ml-3 mr-auto">
                   <Link to="/previous" aria-label="Anterior">
                     <IoIosArrowBack
@@ -164,18 +168,18 @@ function App() {
                   />
                 </div>
                 <div
-                  className="flex flex-row rounded-md mr-auto bg-[#15161a] justify-start gap-3 items-center text-center text-[0.7rem] h-full w-full md:w-[60%]
+                  className="flex flex-row rounded-md mr-auto bg-[#15161a] justify-start gap-3 items-center text-center text-[0.7rem] h-full w-fit md:w-[60%]
                     p-2"
                 >
                   <FaLock className="w-4 h-4 text-[#78949d]" alt="Lock" />
-                  <span className="text-[#78949d] text-[0.9rem]">https://irregulaaar.vercel.app/</span>
+                  <span className="text-[#78949d] text-[12px] text-">https://irregulaaar.vercel.app/</span>
                 </div>
 
                 <menu className="flex-row items-center justify-center hidden mr-3 md:flex">
                   <IoMenu className="w-5 h-5 text-[#78949d]" alt="Menu" />
                 </menu>
               </div>
-              <div className="flex flex-row items-center w-full gap-3 p-1 pl-2 mb-1 h-7">
+              <div className="flex flex-row items-center w-full gap-3 p-1 pl-2 pb-2 h-7 bg-[#1e1f24]">
                 <a href="https://github.com/Irregulaar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <SiGithub
                     className="w-4 h-4 text-white transition-all duration-300 cursor-pointer hover:text-white hover:scale-110"
@@ -222,7 +226,8 @@ function App() {
                 </a>
 
                 <span
-                  className="text-[#78949d] text-[12px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300 z-10"
+                  className="text-[#78949d] text-[9px] text-nowrap md:text-[12px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300
+                    z-10"
                   onClick={() => {
                     document.getElementById("technologies").scrollIntoView({ behavior: "smooth" });
                   }}
@@ -230,7 +235,8 @@ function App() {
                   /Tecnologías
                 </span>
                 <span
-                  className="text-[#78949d] text-[12px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300 z-10"
+                  className="text-[#78949d] text-[9px] text-nowrap md:text-[12px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300
+                    z-10"
                   onClick={() => {
                     document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
                   }}
@@ -238,7 +244,8 @@ function App() {
                   /Proyectos
                 </span>
                 <span
-                  className="text-[#78949d] text-[12px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300 z-10"
+                  className="text-[#78949d] text-[9px] text-nowrap md:text-[12px] p-1 hover:underline rounded-lg cursor-pointer transition-all duration-300
+                    z-10"
                   onClick={() => {
                     document.getElementById("about").scrollIntoView({ behavior: "smooth" });
                   }}
@@ -265,8 +272,12 @@ function App() {
                 }
               `}</style>
 
-              <div className="relative flex flex-col items-center w-full h-fit text-[#78949d] mt-10 mb-15">
-                <span className="text-center text-[4rem] leading-10 mb-4 text-shadow-lg/50 font-[false]" rel="preload">
+              <div className="relative flex flex-col items-center w-full h-fit text-[#87a5ae] mt-10 mb-15">
+                <span
+                  className="text-center text-[4rem] text-[#97bac5] leading-10 mb-4 text-shadow-lg/50 text-shadow-[#708a92] font-[false]
+                    drop-shadow-[0_0_5px_rgba(151,186,197,0.7)]"
+                  rel="preload"
+                >
                   Kevin Sanchez
                 </span>
                 <TypedText texts={["Desarrollador Frontend"]} />
@@ -281,7 +292,9 @@ function App() {
                     justify-start items-center pl-2 flex-row gap-3"
                 >
                   <FaLightbulb className="w-5 h-5 text-[#b8a7c4]" alt="Technologies" />
-                  <span className="text-[#b8a7c4] text-[1.3rem] font-[false]">Tecnologías</span>
+                  <span className="text-[#b8a7c4] text-[1.3rem] font-[false] text-shadow-lg/50 text-shadow-[#9b88a9] drop-shadow-[0_0_10px_rgba(184,167,196,1)]">
+                    Tecnologías
+                  </span>
                 </div>
                 <div className="w-[90%] flex flex-col items-center justify-center">
                   <div className="flex flex-col items-center justify-center w-full gap-5 mb-5">
@@ -289,29 +302,29 @@ function App() {
                       <h3 className="mb-2 text-lg font-medium text-[#b8a7c4]">Lenguajes</h3>
                       <div className="flex flex-wrap items-center justify-center gap-2">
                         <div
-                          className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                            hover:scale-105 transition-transform"
+                          className="px-2 py-1 font-medium text-white bg-[#e34f2622] rounded-md flex flex-row gap-2 items-center transition-all duration-300
+                            hover:-translate-y-1 hover:opacity-100 opacity-90"
                         >
                           <SiHTML5 className="w-5 h-5 text-[#E34F26]" alt="HTML5" />
                           HTML
                         </div>
                         <div
-                          className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                            hover:scale-105 transition-transform"
+                          className="px-2 py-1 font-medium text-white bg-[#1572b622] rounded-md flex flex-row gap-2 items-center transition-all duration-300
+                            hover:-translate-y-1 hover:opacity-100 opacity-90"
                         >
                           <SiCSS3 className="w-5 h-5 text-[#1572B6]" alt="CSS3" />
                           CSS
                         </div>
                         <div
-                          className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                            hover:scale-105 transition-transform"
+                          className="px-2 py-1 font-medium text-white bg-[#f7df1e33] rounded-md flex flex-row gap-2 items-center transition-all duration-300
+                            hover:-translate-y-1 hover:opacity-100 opacity-90"
                         >
                           <SiJavaScript className="w-5 h-5 text-[#F7DF1E]" alt="JavaScript" />
                           JavaScript
                         </div>
                         <div
-                          className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                            hover:scale-105 transition-transform"
+                          className="px-2 py-1 font-medium text-white bg-[#3776ab22] rounded-md flex flex-row gap-2 items-center transition-all duration-300
+                            hover:-translate-y-1 hover:opacity-100 opacity-90"
                         >
                           <SiPython className="w-5 h-5 text-[#3776AB]" alt="Python" />
                           Python
@@ -323,15 +336,15 @@ function App() {
                       <h3 className="mb-2 text-lg font-medium text-[#b8a7c4]">Frameworks</h3>
                       <div className="flex flex-wrap items-center gap-2">
                         <div
-                          className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                            hover:scale-105 transition-transform"
+                          className="px-2 py-1 font-medium text-white bg-[#61dafb22] rounded-md flex flex-row gap-2 items-center transition-all duration-300
+                            hover:-translate-y-1 hover:opacity-100 opacity-90"
                         >
                           <SiReact className="w-5 h-5 text-[#61DAFB]" alt="React" />
                           React
                         </div>
                         <div
-                          className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                            hover:scale-105 transition-transform"
+                          className="px-2 py-1 font-medium text-white bg-[#06b6d422] rounded-md flex flex-row gap-2 items-center transition-all duration-300
+                            hover:-translate-y-1 hover:opacity-100 opacity-90"
                         >
                           <SiTailwindCSS className="w-5 h-5 text-[#06B6D4]" alt="Tailwind CSS" />
                           Tailwind
@@ -343,15 +356,15 @@ function App() {
                       <h3 className="mb-2 text-lg font-medium text-[#b8a7c4]">Herramientas</h3>
                       <div className="flex flex-wrap items-center gap-2">
                         <div
-                          className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                            hover:scale-105 transition-transform"
+                          className="px-2 py-1 font-medium text-white bg-[#f0503222] rounded-md flex flex-row gap-2 items-center transition-all duration-300
+                            hover:-translate-y-1 hover:opacity-100 opacity-90"
                         >
                           <SiGit className="w-5 h-5 text-[#F05032]" alt="Git" />
                           Git
                         </div>
                         <div
-                          className="px-2 py-1 font-medium text-[#9ca3af] bg-[#1a1a1a] border-1 border-[#2f2f2f] rounded-md flex flex-row gap-2 items-center
-                            hover:scale-105 transition-transform"
+                          className="px-2 py-1 font-medium text-white bg-[#ffffff11] rounded-md flex flex-row gap-2 items-center transition-all duration-300
+                            hover:-translate-y-1 hover:opacity-100 opacity-90"
                         >
                           <SiGithub className="w-5 h-5 text-white" alt="GitHub" />
                           GitHub
@@ -368,44 +381,50 @@ function App() {
                     justify-start items-center pl-2 flex-row gap-3"
                 >
                   <FaCode className="w-5 h-5 text-[#8fcea6]" alt="Code" />
-                  <span className="text-[#8fcea6] text-[1.3rem] font-[false]">Proyectos</span>
+                  <span className="text-[#8fcea6] text-[1.3rem] font-[false] text-shadow-lg/50 text-shadow-[#7db595] drop-shadow-[0_0_10px_rgba(143,206,166,1)]">
+                    Proyectos
+                  </span>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-[95%] mb-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-[95%] mb-2">
                   <a
                     href="https://codeknockout.onrender.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col gap-3 bg-[#1a1a1a] p-5 rounded-lg border-1 border-[#2f2f2f] transition-all duration-300 card-3d
-                      overflow-hidden"
+                    className="group flex flex-col relative h-fit bg-[#1a1a1aeb] backdrop-blur-sm rounded-lg transition-all duration-300 overflow-hidden
+                      hover:-translate-y-1 hover:drop-shadow-[0_0_5px_rgba(143,206,166,0.3)]"
                   >
-                    <div className="flex flex-row items-center justify-between text-white">
-                      <span className="text-xl font-medium terminal-font">Code Knockout</span>
+                    <img
+                      src="/projects/codeknockout.webp"
+                      className="object-cover w-full h-fit transition-transform duration-700"
+                      alt="Code Knockout"
+                    />
+                    <div className="absolute w-full h-fit flex items-center gap-1 justify-end p-1 text-white">
+                      <a
+                        href="https://codeknockouoot.onrender.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-7 h-7 bg-black/70 rounded p-1 flex justify-center items-center duration-300 opacity-50 group-hover:opacity-100 z-100"
+                      >
+                        <FaLink alt="Falink" className="w-7 h-7" />
+                      </a>
                       <FaExternalLinkAlt
-                        className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110"
+                        className="w-7 h-7 font-medium transition-all p-1 bg-black/70 rounded duration-300 opacity-50 group-hover:opacity-100"
                         alt="External Link"
                       />
                     </div>
-                    <span className="text-sm text-[#c9c9c9]">
-                      Un sitio web dinámico para una competencia de programación con registro y tabla de clasificación.
-                    </span>
-                    <div className="relative w-full h-48 mt-auto overflow-hidden rounded-lg">
-                      <img
-                        src="/projects/codeknockout.webp"
-                        className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-                        alt="Code Knockout"
-                      />
-                      <div
-                        className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity
-                          duration-300 flex items-end"
-                      >
-                        <div className="w-full p-4">
-                          <div className="flex flex-wrap gap-2">
-                            <span className="bg-[#e34f26] text-white text-xs px-2 py-1 rounded">HTML</span>
-                            <span className="bg-[#1572b6] text-white text-xs px-2 py-1 rounded">CSS</span>
-                            <span className="bg-[#f7df1e] text-black text-xs px-2 py-1 rounded">JavaScript</span>
-                          </div>
-                        </div>
+
+                    <div className="flex flex-col gap-2 p-3 justify-start">
+                      <span className="text-3xl font-[false] text-white">Code Knockout</span>
+                      <span className="text-sm text-[#c9c9c9]">
+                        Un sitio web dinámico para una competencia de programación con registro y tabla de clasificación.
+                      </span>
+                      <div className="relative w-full flex-wrap h-fit rounded-lg gap-1 flex flex-row mt-1">
+                        <span className="bg-[#e34f26] text-white text-xs px-2 py-1 rounded">HTML</span>
+                        <span className="bg-[#1572b6] text-white text-xs px-2 py-1 rounded">CSS</span>
+                        <span className="bg-[#f7df1e] text-black text-xs px-2 py-1 rounded">JavaScript</span>
+                        <span className="bg-[#61DAFB] text-black text-xs px-2 py-1 rounded">React</span>
+                        <span className="bg-[#06B6D4] text-black text-xs px-2 py-1 rounded">Tailwind</span>
                       </div>
                     </div>
                   </a>
@@ -413,108 +432,113 @@ function App() {
                     href="https://yourtodoo.onrender.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col gap-3 bg-[#1a1a1a] p-5 rounded-lg border-1 border-[#2f2f2f] transition-all duration-300 card-3d
-                      overflow-hidden"
+                    className="group flex flex-col relative h-fit bg-[#1a1a1aeb] backdrop-blur-sm rounded-lg transition-all duration-300 overflow-hidden
+                      hover:-translate-y-1 hover:drop-shadow-[0_0_5px_rgba(143,206,166,0.3)]"
                   >
-                    <div className="flex flex-row items-center justify-between text-white">
-                      <span className="text-xl font-medium terminal-font">YourToDoo</span>
-                      <FaExternalLinkAlt
-                        className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110"
-                        alt="External Link"
-                      />
-                    </div>
-                    <span className="text-sm text-[#c9c9c9]">Una aplicación de tareas con una interfaz limpia y moderna.</span>
-                    <div className="relative w-full h-48 overflow-hidden rounded-lg">
-                      <img
-                        src="/projects/yourtodoo.webp"
-                        alt="YourToDoo"
-                        className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div
-                        className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity
-                          duration-300 flex items-end"
+                    <img
+                      src="/projects/yourtodoo.webp"
+                      className="object-cover w-full h-fit transition-transform duration-700"
+                      alt="YourToDoo"
+                    />
+                    <div className="absolute w-full h-fit flex items-center gap-1 justify-end p-1 text-white">
+                      <a
+                        href="https://yourtodoo.onrender.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-7 h-7 bg-black/70 rounded p-1 flex justify-center items-center duration-300 opacity-50 group-hover:opacity-100 z-100"
                       >
-                        <div className="w-full p-4">
-                          <div className="flex flex-wrap gap-2">
-                            <span className="bg-[#e34f26] text-white text-xs px-2 py-1 rounded">HTML</span>
-                            <span className="bg-[#1572b6] text-white text-xs px-2 py-1 rounded">CSS</span>
-                            <span className="bg-[#f7df1e] text-black text-xs px-2 py-1 rounded">JavaScript</span>
-                          </div>
-                        </div>
+                        <FaLink className="w-7 h-7" />
+                      </a>
+                      <FaExternalLinkAlt className="w-7 h-7 font-medium transition-all p-1 bg-black/70 rounded duration-300 opacity-50 group-hover:opacity-100" />
+                    </div>
+
+                    <div className="flex flex-col gap-2 p-3 justify-start">
+                      <span className="text-3xl text-white font-[false]">YourToDoo</span>
+                      <span className="text-sm text-[#c9c9c9]">Una aplicación de tareas con una interfaz limpia y moderna.</span>
+                      <div className="relative w-full flex-wrap h-fit rounded-lg gap-1 flex flex-row mt-1">
+                        <span className="bg-[#e34f26] text-white text-xs px-2 py-1 rounded">HTML</span>
+                        <span className="bg-[#1572b6] text-white text-xs px-2 py-1 rounded">CSS</span>
+                        <span className="bg-[#f7df1e] text-black text-xs px-2 py-1 rounded">JavaScript</span>
+                        <span className="bg-[#61DAFB] text-black text-xs px-2 py-1 rounded">React</span>
+                        <span className="bg-[#06B6D4] text-black text-xs px-2 py-1 rounded">Tailwind</span>
                       </div>
                     </div>
                   </a>
+
                   <a
                     href="https://simplestwebrpg.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col gap-3 bg-[#1a1a1a] p-5 rounded-lg border-1 border-[#2f2f2f] transition-all duration-300 card-3d
-                      overflow-hidden"
+                    className="group flex flex-col relative h-fit bg-[#1a1a1aeb] backdrop-blur-sm rounded-lg transition-all duration-300 overflow-hidden
+                      hover:-translate-y-1 hover:drop-shadow-[0_0_5px_rgba(143,206,166,0.3)]"
                   >
-                    <div className="flex flex-row items-center justify-between text-white">
-                      <span className="text-xl font-medium terminal-font">Simplest Web RPG</span>
-                      <FaExternalLinkAlt
-                        className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110"
-                        alt="External Link"
-                      />
-                    </div>
-                    <span className="text-sm text-[#c9c9c9]">
-                      Una aplicación de chat en tiempo real con funciones como compartir archivos y mensajes de voz.
-                    </span>
-                    <div className="relative w-full h-48 overflow-hidden rounded-lg">
-                      <img
-                        src="/projects/simplestwebrpg.webp"
-                        alt="Simplest Web RPG"
-                        className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div
-                        className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity
-                          duration-300 flex items-end"
+                    <img
+                      src="/projects/simplestwebrpg.webp"
+                      className="object-cover w-full h-fit transition-transform duration-700"
+                      alt="Simplest Web RPG"
+                    />
+                    <div className="absolute w-full h-fit flex items-center gap-1 justify-end p-1 text-white">
+                      <a
+                        href="https://simplestwebrpg.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-7 h-7 bg-black/70 rounded p-1 flex justify-center items-center duration-300 opacity-50 group-hover:opacity-100 z-100"
                       >
-                        <div className="w-full p-4">
-                          <div className="flex flex-wrap gap-2">
-                            <span className="bg-[#e34f26] text-white text-xs px-2 py-1 rounded">HTML</span>
-                            <span className="bg-[#1572b6] text-white text-xs px-2 py-1 rounded">CSS</span>
-                            <span className="bg-[#f7df1e] text-black text-xs px-2 py-1 rounded">JavaScript</span>
-                          </div>
-                        </div>
+                        <FaLink className="w-7 h-7" />
+                      </a>
+                      <FaExternalLinkAlt className="w-7 h-7 font-medium transition-all p-1 bg-black/70 rounded duration-300 opacity-50 group-hover:opacity-100" />
+                    </div>
+
+                    <div className="flex flex-col gap-2 p-3 justify-start">
+                      <span className="text-3xl text-white font-[false]">Simplest Web RPG</span>
+                      <span className="text-sm text-[#c9c9c9]">
+                        Una app RPG básica jugable en navegador, con combates simples y progresión.
+                      </span>
+                      <div className="relative w-full flex-wrap h-fit rounded-lg gap-1 flex flex-row mt-1">
+                        <span className="bg-[#e34f26] text-white text-xs px-2 py-1 rounded">HTML</span>
+                        <span className="bg-[#1572b6] text-white text-xs px-2 py-1 rounded">CSS</span>
+                        <span className="bg-[#f7df1e] text-black text-xs px-2 py-1 rounded">JavaScript</span>
+                        <span className="bg-[#61DAFB] text-black text-xs px-2 py-1 rounded">React</span>
+                        <span className="bg-[#06B6D4] text-black text-xs px-2 py-1 rounded">Tailwind</span>
                       </div>
                     </div>
                   </a>
+
                   <a
                     href="https://noctis-jq9a.onrender.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col gap-3 bg-[#1a1a1a] p-5 rounded-lg border-1 border-[#2f2f2f] transition-all duration-300 card-3d
-                      overflow-hidden"
+                    className="group flex flex-col relative h-fit bg-[#1a1a1aeb] backdrop-blur-sm rounded-lg transition-all duration-300 overflow-hidden
+                      hover:-translate-y-1 hover:drop-shadow-[0_0_5px_rgba(143,206,166,0.3)]"
                   >
-                    <div className="flex flex-row items-center justify-between text-white">
-                      <span className="text-xl font-medium terminal-font">Noctis</span>
-                      <FaExternalLinkAlt
-                        className="text-lg font-medium transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110"
-                        alt="External Link"
-                      />
-                    </div>
-                    <span className="text-sm text-[#c9c9c9]">
-                      Una aplicación de chat en tiempo real con funciones como compartir archivos y mensajes de voz.
-                    </span>
-                    <div className="relative w-full h-48 overflow-hidden rounded-lg">
-                      <img
-                        src="/projects/noctis.webp"
-                        alt="Noctis"
-                        className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div
-                        className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity
-                          duration-300 flex items-end"
+                    <img
+                      src="/projects/noctis.webp"
+                      className="object-cover w-full h-fit transition-transform duration-700"
+                      alt="Noctis"
+                    />
+                    <div className="absolute w-full h-fit flex items-center gap-1 justify-end p-1 text-white">
+                      <a
+                        href="https://noctis-jq9a.onrender.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-7 h-7 bg-black/70 rounded p-1 flex justify-center items-center duration-300 opacity-50 group-hover:opacity-100 z-100"
                       >
-                        <div className="w-full p-4">
-                          <div className="flex flex-wrap gap-2">
-                            <span className="bg-[#e34f26] text-white text-xs px-2 py-1 rounded">HTML</span>
-                            <span className="bg-[#1572b6] text-white text-xs px-2 py-1 rounded">CSS</span>
-                            <span className="bg-[#f7df1e] text-black text-xs px-2 py-1 rounded">JavaScript</span>
-                          </div>
-                        </div>
+                        <FaLink className="w-7 h-7" />
+                      </a>
+                      <FaExternalLinkAlt className="w-7 h-7 font-medium transition-all p-1 bg-black/70 rounded duration-300 opacity-50 group-hover:opacity-100" />
+                    </div>
+
+                    <div className="flex flex-col gap-2 p-3 justify-start">
+                      <span className="text-3xl text-white font-[false]">Noctis</span>
+                      <span className="text-sm text-[#c9c9c9]">
+                        Chat web en tiempo real con mensajes de voz y envío de archivos.
+                      </span>
+                      <div className="relative w-full flex-wrap h-fit rounded-lg gap-1 flex flex-row mt-1">
+                        <span className="bg-[#e34f26] text-white text-xs px-2 py-1 rounded">HTML</span>
+                        <span className="bg-[#1572b6] text-white text-xs px-2 py-1 rounded">CSS</span>
+                        <span className="bg-[#f7df1e] text-black text-xs px-2 py-1 rounded">JavaScript</span>
+                        <span className="bg-[#61DAFB] text-black text-xs px-2 py-1 rounded">React</span>
+                        <span className="bg-[#06B6D4] text-black text-xs px-2 py-1 rounded">Tailwind</span>
                       </div>
                     </div>
                   </a>
@@ -523,30 +547,32 @@ function App() {
 
               <div
                 id="about"
-                className="w-[80%] h-fit flex flex-col gap-3 justify-center items-center bg-[#e3e3e334] mb-15 rounded-md"
+                className="w-[80%] h-fit flex flex-col gap-3 justify-center items-center bg-[#3b82f633] mb-15 rounded-md"
               >
                 <div
-                  className="w-full h-10 bg-[#e3e3e36a] border-1 border-[#c8c8c8] rounded-md flex shadow-[0px_0px_10px_0px_#000000] shadow-[#838383]
+                  className="w-full h-10 bg-[#3b82f66a] border-1 border-[#60a5fa] rounded-md flex shadow-[0px_0px_10px_0px_#000000] shadow-[#60a5fa]
                     justify-start pl-2 items-center gap-3 mb-5"
                 >
-                  <FaQuestion className="w-5 h-5 text-[#cecece]" alt="Question" />
-                  <span className="text-[#cecece] text-[1.3rem] font-[false]">Sobre mí</span>
+                  <FaQuestion className="w-5 h-5 text-[#bfdbfe]" alt="Question" />
+                  <span className="text-[#bfdbfe] text-[1.3rem] font-[false] text-shadow-lg/50 text-shadow-[#93c5fd] drop-shadow-[0_0_10px_rgba(191,219,254,1)]">
+                    Sobre mí
+                  </span>
                 </div>
 
                 <div className="flex flex-row flex-wrap items-center justify-center w-full gap-4 p-5 pt-0 pb-0 mb-7">
                   <div className="flex flex-col w-full gap-8">
                     <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
                       <div className="w-50 h-50">
-                        <div className="w-full h-full overflow-hidden rounded-full border-2 border-[#2f2f2f]">
+                        <div className="w-full h-full overflow-hidden rounded-full border-2 border-[#1e3a8a]">
                           <img src="/pfp.webp" className="object-cover object-top w-full h-full" alt="PFP" />
                         </div>
                       </div>
 
                       <div className="flex flex-col items-center justify-start flex-1 gap-2 md:items-start">
-                        <span className="text-[#cecece] text-[2rem] font-regular w-[90%] text-center md:text-start">
+                        <span className="text-[#bfdbfe] text-[2rem] font-regular w-[90%] text-center md:text-start">
                           ¡Hola! Soy Kevin
                         </span>
-                        <span className="text-[#cecece] text-[1rem] font-regular w-[90%] text-center md:text-start">
+                        <span className="text-[#bfdbfe] text-[1rem] font-regular w-[90%] text-center md:text-start">
                           Un chico colombiano de 20 años que se adentro en el mundo del <strong>desarrollo web</strong> en{" "}
                           <strong>marzo de 2025</strong>. Ya sabía algo de programación, pero nunca habia estudiado nada
                           relacionado con <strong>frontend</strong>. Desde que empecé, lo he disfrutado mucho, especialmente la{" "}
@@ -556,8 +582,8 @@ function App() {
                       </div>
                     </div>
 
-                    <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 text-[#cecece]">
-                      <div className="bg-[#e3e3e336] p-4 rounded-lg border-1 border-[#c8c8c8] h-full">
+                    <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 text-[#bfdbfe]">
+                      <div className="bg-[#3b82f633] p-4 rounded-lg border-1 border-[#60a5fa] h-full">
                         <h3 className="mb-2 font-medium">Enfoque Actual</h3>
                         <p className="text-sm">
                           Actualmente me estoy enfocando en dominar React y expandir mi conocimiento en frameworks frontend
@@ -565,7 +591,7 @@ function App() {
                         </p>
                       </div>
 
-                      <div className="bg-[#e3e3e336] p-4 rounded-lg border-1 border-[#c8c8c8] h-full">
+                      <div className="bg-[#3b82f633] p-4 rounded-lg border-1 border-[#60a5fa] h-full">
                         <h3 className="mb-2 font-medium terminal-font">Objetivos Futuros</h3>
                         <p className="text-sm">
                           Mi objetivo es convertirme en desarrollador full-stack, aprendiendo tecnologías backend y creando
@@ -576,14 +602,20 @@ function App() {
                   </div>
                 </div>
               </div>
+              <div
+                className="text-[#fff] text-center text-nowrap w-full justify-center items-center font-regular flex-col flex gap-1 mt-10 text-[10px]
+                  md:text-[12px]"
+              >
+                <div className="w-full h-px bg-white opacity-20"></div>
+                <div className="flex flex-row justify-between md:justify-center md:gap-10 w-full px-2 items-center">
+                  <p>
+                    Hecho con <span className="text-red-500">❤</span> por Irregular
+                  </p>
+                  <p className="opacity-70">Última actualización: Abril 2025</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="text-[#fff] text-center font-regular flex-row flex gap-10 mt-20 text-[12px]">
-          <p>
-            Hecho con <span className="text-red-500">❤</span> por Irregular
-          </p>
-          <p className="opacity-70">Última actualización: Abril 2025</p>
         </div>
       </div>
     </>
