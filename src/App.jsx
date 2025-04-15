@@ -526,7 +526,7 @@ function App() {
                   </a>
 
                   <a
-                    href="https://noctis-jq9a.onrender.com"
+                    href="https://platica.onrender.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex flex-col relative h-fit bg-[#1a1a1aeb] backdrop-blur-sm rounded-lg transition-all duration-300 overflow-hidden
@@ -539,7 +539,7 @@ function App() {
                     />
                     <div className="absolute w-full h-fit flex items-center gap-1 justify-end p-1 text-white">
                       <a
-                        href="https://github.com/Autisogino-Organization/Noctis"
+                        href="https://github.com/Autisogino-Organization/Platica"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-7 h-7 bg-black/70 rounded p-1 flex justify-center items-center duration-300 opacity-50 group-hover:opacity-100 z-100"
@@ -550,7 +550,7 @@ function App() {
                     </div>
 
                     <div className="flex flex-col gap-2 p-3 justify-start">
-                      <span className="text-3xl text-white font-[false]">Noctis</span>
+                      <span className="text-3xl text-white font-[false]">Platica</span>
                       <span className="text-sm text-[#c9c9c9]">
                         Chat web en tiempo real con mensajes de voz y envío de archivos.
                       </span>
